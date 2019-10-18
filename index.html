@@ -6,62 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Resume Kengkawee Uengrattanawong</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <style>
         .avatar {
             vertical-align: middle;
-            width: 15%;
-            height: 15%;
+            width: 30%;
+            height: 30%;
             margin-left: 20px;
             border-radius: 50%;
         }
         
+        .resume {
+            vertical-align: middle;
+            width: 80%;
+            border-radius: 50%;
+        }
+        
         .profile-th {
-            width: 30%;
-            margin-left: 20px;
+            position: relative;
         }
         
         .profile-en {
-            position: absolute;
-            top: 100px;
-            right: 10px;
-            width: 30%;
+            position: relative;
+            top: 50px;
         }
     </style>
 </head>
 
-<body style="background-image: url(img/profile_bg.jpg);">
+<body style="background-image: url(img/profile_bg.jpg);font-family: PrintAble4U, verdana, helvetica, sans-serif;font-size: 20px;">
     <div align="right">
-        <h1 style="color:white;">Landing Page Resume</h1>
+        <h1 style="color:white;">Responsive Resume Page</h1>
     </div>
-    <img src="img/profile.jpg" alt="Avatar" class="avatar">
-    <div class="profile-th">
-        <h2> นายเก่งกวี อึ้งรัตนวงษ์</h2>
-        <h3>ชื่อเล่น : ฟลุ๊ค</h3>
-        <h3 align="center" style="margin-left: -10%;">การศึกษา</h3>
-        <h4>จบปริญญาตรี จากมหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน วิทยาเขตขอนแก่น</h4>
-        <h3 align="center" style="margin-left: -10%;">ความสามารถพิเศษ</h3>
-        <ul>
-            <li>มีความสามารถในการเขียนภาษา PHP, HTML, CSS, VB</li>
-            <li>สามารถใช้โปรแกรมคอมพิวเตอร์ต่างๆ ได้ เช่น Microsoft Office, Adobe Photoshop, Adobe Dreamweaver, SublimeText3, Visual Studio</li>
-            <li>มีความสามารถในการออกแบบฐานข้อมูล MySQL</li>
-            <li>สามารถเขียน Hybrid application ผ่าน ionic framework ได้</li>
-        </ul>
+    <div class="row">
+        <div class="profile-th col-md-4">
+            <div style="text-align: center;">
+                <img src="img/profile.jpg" alt="Avatar" class="avatar">
+                <h2> นายเก่งกวี อึ้งรัตนวงษ์</h2>
+                <h3>ชื่อเล่น : ฟลุ๊ค</h3>
+            </div>
+            <h3 align="center">การศึกษา</h3>
+            <h4 align="center">จบปริญญาตรี จากมหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน วิทยาเขตขอนแก่น</h4>
+            <h3 align="center">ความสามารถพิเศษ</h3>
+            <ul>
+                <li>มีความสามารถในการเขียนภาษา PHP, HTML, CSS, VB</li>
+                <li>สามารถใช้โปรแกรมคอมพิวเตอร์ต่างๆ ได้ เช่น Microsoft Office, Adobe Photoshop, Adobe Dreamweaver, SublimeText3, Visual Studio</li>
+                <li>มีความสามารถในการออกแบบฐานข้อมูล MySQL</li>
+                <li>สามารถเขียน Hybrid application ผ่าน ionic framework ได้</li>
+            </ul>
+        </div>
+        <div class="col-md-4" style="text-align: center;">
+            <img src="img/resume.png" width="100%" class="resume">
+        </div>
+        <div class="profile-en col-md-4">
+            <div style="text-align: center;">
+                <h2>Mr.Kengkawee Uengrattanawong</h2>
+                <h3>Nickname : fluke</h3>
+            </div>
+            <h3 align="center"><b>Education</b></h3>
+            <h4 align="center">Bachelor's degree from Rajamangala University of Technology Isan Khon Kaen Campus</h4>
+            <h3 align="center"><b>Genius</b></h3>
+            <ul>
+                <li>Have the ability to write language PHP, HTML, CSS, VB</li>
+                <li>Can use various computer programs such as Microsoft Office, Adobe Photoshop, Adobe Dreamweaver, SublimeText3, Visual Studio</li>
+                <li>Have the ability to design database MySQL</li>
+                <li>Can write Hybrid application ionic framework</li>
+            </ul>
+        </div>
     </div>
-    <div class="profile-en">
-        <h2>Mr.Kengkawee Uengrattanawong</h2>
-        <h3>Nickname : fluke</h3>
-        <h3 align="center" style="margin-left: -10%;">Education</h3>
-        <h4>Bachelor's degree from Rajamangala University of Technology Isan Khon Kaen Campus</h4>
-        <h3 align="center" style="margin-left: -10%;">Genius</h3>
-        <ul>
-            <li>Have the ability to write language PHP, HTML, CSS, VB</li>
-            <li>Can use various computer programs such as Microsoft Office, Adobe Photoshop, Adobe Dreamweaver, SublimeText3, Visual Studio</li>
-            <li>Have the ability to design database MySQL</li>
-            <li>Can write Hybrid application ionic framework</li>
-        </ul>
-    </div>
-
 </body>
 
 </html>
