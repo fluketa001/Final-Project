@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
     <style>
         .avatar {
@@ -33,29 +34,70 @@
             position: relative;
             top: 50px;
         }
+        
+        #change {
+            background-image: url('img/profile_bg.jpg');
+        }
     </style>
+    <script type="text/javascript">
+        function editName() {
+            var name = prompt('Please Edi your name');
+            document.getElementById('editname').innerHTML = name
+        }
+
+        function changeBGover() {
+            document.getElementById("change").style.backgroundImage = "url('img/abstract-geometric-1080x675.png')";
+        }
+
+        function changeBGOut() {
+            document.getElementById("change").style.backgroundImage = "url('img/profile_bg.jpg')";
+        }
+
+        function add() {
+            //declaring the variables
+            var detail = prompt('Please Edi your name');
+            var ul = document.getElementById("list");
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(detail));
+            ul.appendChild(li);
+        }
+
+        function remove() {
+
+            var lis = document.querySelectorAll('#list li');
+            for (var i = 0; li = lis[i]; i++) {
+                li.parentNode.removeChild(li);
+            }
+            /*function remove() {
+                var mylist = document.getElementById("list");
+                mylist.removeChild(mylist.childNodes[0]);
+            }*/
+        }
+    </script>
 </head>
 
-<body style="background-image: url(img/profile_bg.jpg);font-family: PrintAble4U, verdana, helvetica, sans-serif;font-size: 20px;">
+<body id="change" style="font-family: PrintAble4U, verdana, helvetica, sans-serif;font-size: 20px;">
     <div align="right">
-        <h1 style="color:white;">Responsive Resume Page</h1>
+        <h1 style="color:white;">Dynamic Resume Page</h1>
     </div>
     <div class="row">
         <div class="profile-th col-md-4">
             <div style="text-align: center;">
                 <img src="img/profile.jpg" alt="Avatar" class="avatar">
-                <h2> นายเก่งกวี อึ้งรัตนวงษ์</h2>
+                <h2 id="editname"> นายเก่งกวี อึ้งรัตนวงษ์ </h2><button class="btn-primary" onclick="editName()"><i class='fas fa-pencil-alt' style='font-size:24px'></i>แก้ไขชื่อ - นามสกุล</button>
                 <h3>ชื่อเล่น : ฟลุ๊ค</h3>
             </div>
             <h3 align="center">การศึกษา</h3>
             <h4 align="center">จบปริญญาตรี จากมหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน วิทยาเขตขอนแก่น</h4>
+            <div align="center"><button class="btn-primary" onclick="add()">เพิ่มความสามารถพิเศษ</button><button class="btn-danger" onclick="remove()">Xลบข้อมูล</button></div>
             <h3 align="center">ความสามารถพิเศษ</h3>
-            <ul>
+            <ul id="list">
                 <li>มีความสามารถในการเขียนภาษา PHP, HTML, CSS, VB</li>
                 <li>สามารถใช้โปรแกรมคอมพิวเตอร์ต่างๆ ได้ เช่น Microsoft Office, Adobe Photoshop, Adobe Dreamweaver, SublimeText3, Visual Studio</li>
                 <li>มีความสามารถในการออกแบบฐานข้อมูล MySQL</li>
                 <li>สามารถเขียน Hybrid application ผ่าน ionic framework ได้</li>
             </ul>
+            <div align="center"><button class="btn-primary" onmouseover="changeBGover()" onmouseout="changeBGOut()">ชี้เพื่อเปลี่ยนพื้นหลัง</button></div>
         </div>
         <div class="col-md-4" style="text-align: center;">
             <img src="img/resume.png" width="100%" class="resume">
